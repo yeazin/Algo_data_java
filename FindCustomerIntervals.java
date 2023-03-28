@@ -27,9 +27,6 @@ public class FindCustomerInterval {
         int interval[] = { 12, 18 };
 
         customer_interval(arrival_time, interval);
-
         
-        
-
     }
 }
