@@ -7,22 +7,29 @@
 
 public class FindCustomerInterval {
 
-    public static void main(String[] args) {
+    static void customer_interval(int arrival_time[],int time_interval[]){
+        
+        int customer_count = 0;
+
+        for (int i=0; i < arrival_time.length; i ++){
+            if (arrival_time[i] >= time_interval[0] && 
+                arrival_time[i] <= time_interval[1]){
+                    customer_count ++;
+                }
+        }
+
+        System.out.println("Total Customer" + customer_count);
+    }
+
+    public static void main(String args[]){
 
         int arrival_time[] = { 10, 12, 14, 15, 18, 20, 22 };
         int interval[] = { 12, 18 };
-        int count_customer = 0;
 
-        for (int i = 0; i < arrival_time.length; i++) {
+        customer_interval(arrival_time, interval);
 
-            if (arrival_time[i] >= interval[0] &&
-                    arrival_time[i] <= interval[1]) {
-
-                count_customer++;
-            }
-        }
-
-        System.out.println("Total Customer" + " " + count_customer);
+        
+        
 
     }
 }
