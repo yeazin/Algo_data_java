@@ -4,28 +4,29 @@
 
 public class FindMaxMinArray {
 
-    public static void main(String[] args) {
+    static String max_mini(int arr[], int maximum_element, int minium_element){
 
-        int lists[] = { 10, 12, 14, 67, 15, 18, 20, 24, 9 };
-
-        int max_value = lists[0];
-        int min_value = lists[0];
-
-        for (int i = 0; i < lists.length; i++) {
-
-            if (max_value < lists[i]) {
-                max_value = lists[i];
+        for (int i=0; i <arr.length; i++){
+            if (maximum_element < arr[i]){
+                maximum_element = arr[i];
             }
-
-            if (min_value > lists[i]) {
-                min_value = lists[i];
+            if (minium_element > arr[i]){
+                minium_element = arr[i];
             }
-
         }
+        String result = "Maximum element " + maximum_element + " Minimum element " + minium_element;
+        return result;
+    }
 
+    public static void main(String args[]){
 
-        System.out.println(max_value);
-        System.out.println(min_value);
+        int arr[] = {4,5,9,1,48,98,102,115};
+        int maximum_element = arr[0];
+        int minium_element = arr[0];
+        
+        System.out.println(max_mini(arr,maximum_element,minium_element));
+        
+        
 
     }
 }
